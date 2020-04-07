@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.activities.detailsActivity.DetailsActivity">
+
+    <include
+        android:id="@+id/toolbarDetails"
+        layout="@layout/toolbar_details" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_dimen">
+
+        <TextView
+        android:id="@+id/textViewInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        tools:text="Note created on 32/02/2058 at 25:61"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_view_height"
+            app:layout_constraintTop_toBottomOf="@id/textViewInformation"
+            android:background="@color/colorWhite"
+            android:padding="1dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textViewSavedDate"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/textViewSavedTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewSavedNote"
+                android:gravity="center"
+                android:background="@color/colorLightGreen"
+                tools:text="@string/date"
+                app:layout_constraintHorizontal_weight="0.3"/>
+
+            <TextView
+                android:id="@+id/textViewSavedTime"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                app:layout_constraintTop_toBottomOf="@id/textViewSavedDate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewSavedNote"
+                android:gravity="center"
+                android:background="@color/colorLightGreen"
+                tools:text="@string/time"
+                app:layout_constraintHorizontal_weight="0.3"/>
+
+            <TextView
+                android:id="@+id/textViewSavedNote"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewSavedDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/colorGreen"
+                android:gravity="center"
+                tools:text="@string/note"
+                android:textSize="@dimen/item_note_size"
+                app:layout_constraintHorizontal_weight="0.7"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textViewEditDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/edit_separator"
+            android:textStyle="bold"
+            android:textSize="@dimen/item_note_size"/>
+
+        <EditText
+            android:id="@+id/editTextEditNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textViewEditDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:hint="@string/update_note"
+            android:textSize="@dimen/tvText"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/imageViewCalendarDetails"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditNote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageViewClockDetails"
+            android:src="@drawable/calendar"
+            android:background="#c3d5d7"/>
+
+        <ImageView
+            android:id="@+id/imageViewClockDetails"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editTextEditNote"
+            app:layout_constraintStart_toEndOf="@id/imageViewCalendarDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/clock"
+            android:background="#a4d2d7"/>
+
+        <TextView
+            android:id="@+id/textViewYourNoteDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageViewCalendarDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/your_note"
+            android:textSize="@dimen/tvTextHeader"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/textViewNotePreviewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textViewYourNoteDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/note_preview"
+            android:textSize="@dimen/tvText"/>
+
+        <TextView
+            android:id="@+id/textViewDatePreviewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textViewNotePreviewDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/date_preview"
+            android:textSize="@dimen/tvText"/>
+
+        <TextView
+            android:id="@+id/textViewTimePreviewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textViewDatePreviewDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/time_preview"
+            android:textSize="@dimen/tvText"/>
+
+        <Button
+            android:id="@+id/buttonDeleteItem"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSaveChangedItem"
+            android:text="@string/delete"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_btn_save"
+            android:background="@color/colorBlackGrey"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/buttonSaveChangedItem"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonDeleteItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/save"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_btn_save"
+            android:background="@color/colorBlackGrey"
+            android:layout_margin="2dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

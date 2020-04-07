@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:padding="@dimen/padding_dimen">
+
+    <EditText
+        android:id="@+id/editTextAddNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/add_note"
+        android:textSize="@dimen/tvText"
+        android:inputType="text" />
+
+    <ImageView
+        android:id="@+id/imageViewCalendarMain"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextAddNote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClockMain"
+        android:src="@drawable/calendar"
+        android:background="#c3d5d7"/>
+
+    <ImageView
+        android:id="@+id/imageViewClockMain"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextAddNote"
+        app:layout_constraintStart_toEndOf="@id/imageViewCalendarMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/clock"
+        android:background="#a4d2d7"/>
+
+    <TextView
+        android:id="@+id/textViewYourNoteMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/textViewNotePreviewMain"
+        android:text="@string/your_note"
+        android:textSize="@dimen/tvTextHeader"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewNotePreviewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/textViewDatePreviewMain"
+        android:text="@string/note_preview"
+        android:textSize="@dimen/tvText"/>
+
+    <TextView
+        android:id="@+id/textViewDatePreviewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/textViewTimePreviewMain"
+        android:text="@string/date_preview"
+        android:textSize="@dimen/tvText"/>
+
+    <TextView
+        android:id="@+id/textViewTimePreviewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttonSaveItem"
+        android:text="@string/time_preview"
+        android:textSize="@dimen/tvText"/>
+
+    <Button
+        android:id="@+id/buttonSaveItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/save"
+        android:textSize="@dimen/text_size_btn_save"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlackGrey"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

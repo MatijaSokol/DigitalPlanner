@@ -1,0 +1,2 @@
+This is version 2 of an assignement for course Basics of Web and Mobile Application Development.
+Changes: code refactor, Kotlin instead of Java, MVP architecture, application stability and improvements.

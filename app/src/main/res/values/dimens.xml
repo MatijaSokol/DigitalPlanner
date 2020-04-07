@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_dimen">5dp</dimen>
+    <dimen name="tvText">20sp</dimen>
+    <dimen name="tvTextHeader">22sp</dimen>
+    <dimen name="margin_left_right_action_bar">15dp</dimen>
+    <dimen name="size_text_action_bar">20sp</dimen>
+    <dimen name="width_linLay_item">90dp</dimen>
+    <dimen name="item_view_height">60dp</dimen>
+    <dimen name="text_size_btn_save">20sp</dimen>
+    <dimen name="item_note_size">18sp</dimen>
+    <dimen name="itemActivity_button_margin_right">2dp</dimen>
+    <dimen name="itemActivity_button_margin_left">2dp</dimen>
+    <dimen name="match_constraint">0dp</dimen>
+</resources>

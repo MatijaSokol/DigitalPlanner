@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Digital Planner</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_note">Add Note</string>
+    <string name="update_note">Update Note</string>
+    <string name="your_note">YOUR NOTE:</string>
+    <string name="save">Save</string>
+    <string name="details">Details</string>
+    <string name="note">Note</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="delete">Delete</string>
+    <string name="edit_separator">------UPDATE------</string>
+    <string name="note_preview">Note:</string>
+    <string name="date_preview">Date:</string>
+    <string name="time_preview">Time:</string>
+    <string name="saved">Saved</string>
+    <string name="input">Input</string>
+    <string name="reminder">REMINDER</string>
+    <string name="note_created_at">Note created on %1$s at %2$s</string>
+    <string name="item_inserted">Item inserted successfully</string>
+    <string name="data_must_be_entered">Data must be entered</string>
+    <string name="note_updated">Note updated</string>
+    <string name="data_missing">Data missing</string>
+    <string name="switch_tab_after_saving">Switch tab after saving</string>
+    <string name="item_deleted">Item deleted</string>
+    <string name="error">Error</string>
+    <string name="item_text">Item text</string>
+    <string name="item_notification_channel">Reminder</string>
+    <string name="item_notification_description">Note reminder notification</string>
+</resources>

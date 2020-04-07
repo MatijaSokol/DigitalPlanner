@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_view_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:padding="1dp"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/textViewSavedDate"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewSavedTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewSavedNote"
+        android:gravity="center"
+        android:background="@color/colorLightGreen"
+        tools:text="@string/date"
+        app:layout_constraintHorizontal_weight="0.3"/>
+
+    <TextView
+        android:id="@+id/textViewSavedTime"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintTop_toBottomOf="@id/textViewSavedDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewSavedNote"
+        android:gravity="center"
+        android:background="@color/colorLightGreen"
+        tools:text="@string/time"
+        app:layout_constraintHorizontal_weight="0.3"/>
+
+    <TextView
+        android:id="@+id/textViewSavedNote"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewSavedDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorGreen"
+        android:gravity="center"
+        tools:text="@string/note"
+        android:textSize="@dimen/item_note_size"
+        app:layout_constraintHorizontal_weight="0.7"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
